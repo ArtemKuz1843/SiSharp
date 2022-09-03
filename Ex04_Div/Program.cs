@@ -8,9 +8,18 @@
 //string - если данные, которые вводим, строки.
 //int - тип данных для целых чисел (целое число).
 //double - контейнер для работы с вещественными числами, дробные с остатком.
+//bool - тип данных Истина или Ложь.
+//% - логическая опреация как умножение или деление, фиксирует остаток от деления.
+//new Random().Next(min, max) - "хочу случайное число в диапазоне от Мин до Макс. Генератор случайных чисел от Мин до Макс-1. !!!Само значение Макуимума не входит!
 //Дальше даём наименование нашему контейнеру (имя переменной или идентификатора).Назовём username
 //формируем приглашение пользователя ко вводу
 
-double numberA = 12;
-double numberB = 5;
-Console.WriteLine(numberA / numberB);
+// double numberA = 12;
+// double numberB = 5;
+// Console.WriteLine(numberA / numberB);
+
+int numberA = new Random().Next(1, 10); // 0 1 2 3 4 ...9
+Console.WriteLine(numberA);
+int numberB = new Random().Next(1, 10);
+Console.WriteLine(numberB);
+Console.WriteLine(numberA + numberB);
