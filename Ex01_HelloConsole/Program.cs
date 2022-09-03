@@ -1,2 +1,2 @@
 ﻿// комментарии пишутся после (//)вщетке
-Console.WriteLine("3 Hello, World!");
+Console.WriteLine("5 Hello, World!");
