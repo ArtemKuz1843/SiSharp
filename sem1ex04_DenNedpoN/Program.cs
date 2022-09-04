@@ -90,13 +90,27 @@
 // }
 // поскольку в if-else только по 1 инструкции можно записать код компактнее, избавится от фигурных скобок:
 
+// Console.Write("Введите день недели от 1 до 7 ");
+// string day = Console.ReadLine();
+// if (day == "1") Console.Write("Понедельник");
+// else if (day == "2") Console.Write("Вторник");
+// else if (day == "3") Console.Write("Среда");
+// else if (day == "4") Console.Write("Четверг");
+// else if (day == "5") Console.Write("Пятница");
+// else if (day == "6") Console.Write("Суббота");
+// else if (day == "7") Console.Write("Воскресенье");
+// else Console.Write("Данного дня недели не существует");
+
 Console.Write("Введите день недели от 1 до 7 ");
-string day = Console.ReadLine();
-if (day == "1") Console.Write("Понедельник");
-else if (day == "2") Console.Write("Вторник");
-else if (day == "3") Console.Write("Среда");
-else if (day == "4") Console.Write("Четверг");
-else if (day == "5") Console.Write("Пятница");
-else if (day == "6") Console.Write("Суббота");
-else if (day == "7") Console.Write("Воскресенье");
+int day = Convert.ToInt32(Console.ReadLine());
+if (day < 8 && day > 1)
+{
+if (day == 1) Console.Write("Понедельник");
+if (day == 2) Console.Write("Вторник");
+if (day == 3) Console.Write("Среда");
+if (day == 4) Console.Write("Четверг");
+if (day == 5) Console.Write("Пятница");
+if (day == 6) Console.Write("Суббота");
+if (day == 7) Console.Write("Воскресенье");
+}
 else Console.Write("Данного дня недели не существует");
