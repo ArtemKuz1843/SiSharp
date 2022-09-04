@@ -3,6 +3,7 @@
 //Для загрузки в удалённый репозиторий программы C# необходимо всего 2 файла, .cs и .csproj, остальные отсеиваются файлом .gitignore (с набором внутри) в корневой дирректории.
 //dotnet new gitignore - кмманда для создания .gitignore в C#. Дирректории нумеруем и называем по порядку задач, и заливаем в GitHub так же.
 //Всплывающие подсказки - результат таботы расширения С#, установленного в приложениях в VScode.
+//Форматировать код - ПКМ "Форматировать документ"
 
 //Console — команда, позволяющая работать с термин. Соответственно, будут какие-то данные вносить/выводить, путём ввода напрямую в терминале.
 //WriteLine. Сonsole.WriteLine(""); - ком, оператор, выв текст в термин и ставит курсор на новую строку, текст, пишется в круглых скобках и двойных кавычках ("").
@@ -53,37 +54,49 @@
 //Console.Write($"Квадрат {num} равен {square}");
 //Console.Write("Квадрат "+num+" равен "+square); //КОНКОТИНАЦИЯ строк
 
+// Console.Write("Введите день недели от 1 до 7 ");
+// string day = Console.ReadLine();
+// if (day == "1")
+// {
+//     Console.Write("Понедельник");
+// }
+// else if (day == "2")
+// {
+//     Console.Write("Вторник");
+// }
+// else if (day == "3")
+// {
+//     Console.Write("Среда");
+// }
+// else if (day == "4")
+// {
+//     Console.Write("Четверг");
+// }
+// else if (day == "5")
+// {
+//     Console.Write("Пятница");
+// }
+// else if (day == "6")
+// {
+//     Console.Write("Суббота");
+// }
+// else if (day == "7")
+// {
+//     Console.Write("Воскресенье");
+// }
+// else
+// {
+//     Console.Write("Данного дня недели не существует");
+// }
+// поскольку в if-else только по 1 инструкции можно записать код компактнее, избавится от фигурных скобок:
+
 Console.Write("Введите день недели от 1 до 7 ");
 string day = Console.ReadLine();
-if (day == "1")
-{
-    Console.Write("Понедельник");
-}
-else if (day == "2")
-{
-    Console.Write("Вторник");
-}
-else if (day == "3")
-{
-    Console.Write("Среда");
-}
-else if (day == "4")
-{
-    Console.Write("Четверг");
-}
-else if (day == "5")
-{
-    Console.Write("Пятница");
-}
-else if (day == "6")
-{
-    Console.Write("Суббота");
-}
-else if (day == "7")
-{
-    Console.Write("Воскресенье");
-}
-else
-{
-    Console.Write("Данного дня недели не существует");
-}
+if (day == "1") Console.Write("Понедельник");
+else if (day == "2") Console.Write("Вторник");
+else if (day == "3") Console.Write("Среда");
+else if (day == "4") Console.Write("Четверг");
+else if (day == "5") Console.Write("Пятница");
+else if (day == "6") Console.Write("Суббота");
+else if (day == "7") Console.Write("Воскресенье");
+else Console.Write("Данного дня недели не существует");
