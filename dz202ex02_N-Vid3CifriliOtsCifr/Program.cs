@@ -14,7 +14,7 @@ if (num > 999)
     }
     Console.WriteLine(num % 10);
 }
-else if (num < 1000 || num > 99)
+else if (num < 1000 && num > 99)
 {
     Console.WriteLine(num % 10);
 }
