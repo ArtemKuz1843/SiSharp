@@ -1,51 +1,57 @@
 ﻿// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // [3 7 22 2 78] -> 76
 
-double[] array = new double[10];
+int[] array = new int[5];
 
-void PrintArray(double[] arr)
+void PrintArray(int[] arr)
 {
-    foreach (var item in array)
+    for(int i =0; i < arr.Length; i++)
     {
-        Console.Write($"{item}, ");
+        Console.Write($"{arr[i]}, ");
     }
-    // for(int i =0; i < arr.Length; i++)
-    // {
-    //     Console.Write($"{arr[i]}, ");
-    // }
 }
 
 PrintArray(array); // массив создан и заполнен нулями
 
 Console.WriteLine();
 
-double[] FillArray(double[] arr)
+int[] FillArray(int[] arr)
 {
-    double[] result = new double[arr.Length];
+    var result = new int[arr.Length];
     for(int i = 0; i < arr.Length; i++)
     {
-        result[i] = new Random().NextDouble(-10, 10);
+        result[i] = new Random().Next(1, 10);
     }
     return result;
 }
 
 var newArray = FillArray(array);
 
-PrintArray(newArray); // массив, заполненный случайными числами, 0-10
+PrintArray(newArray); // массив, заполненный случайными числами, 1-10
 
-// Console.WriteLine();
+Console.WriteLine();
 
-// int SumNoEvenPos(int[] arr)
-// {
-//     int sumNoEvenI = 0;
-//     for(int i = 0; i < arr.Length; i++)
-//     {
-//         if (i % 2 != 0)
-//         {
-//             sumNoEvenI += arr[i];
-//         }
-//     }
-//     return sumNoEvenI;
-// }
+int SerchMax(int[] arr)
+{
+    int max = arr[0];
+        for(int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] > max) max = arr[i];
+    }
+    return max;
+}
+Console.WriteLine(SerchMax(newArray));
 
-// Console.WriteLine($"Сумма чисел, стоящих на нечётных позициях в массиве: {SumNoEvenPos(newArray)}"); // сумма элементов, стоящих на нечётных позициях
+int SerchMin(int[] arr)
+{
+    int min = arr[0];;
+        for(int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] < min) min = arr[i];
+    }
+    return min;
+}
+Console.WriteLine(SerchMin(newArray));
+
+
+Console.WriteLine($"Разницу между максимальным и минимальным элементом массива: {SerchMax(newArray)-SerchMin(newArray)}");
