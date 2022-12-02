@@ -1,0 +1,85 @@
+﻿// Задача 48: Задайте двумерный массив размера m на n, каждый элемент в массиве находится по формуле: Aₘₙ = m+n. Выведите полученный массив на экран.
+// m = 3, n = 4.
+// 0 1 2 3
+// 1 2 3 4
+// 2 3 4 5
+
+Console.WriteLine("Введите количество строк");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество столбцов");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine();
+
+int[,] array = new int[m, n];
+
+FillArray(array);
+Print(array);
+
+int[,] FillArray(int[,] arr)
+{
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            arr[i, j] = i + j;
+        }
+    }
+    return arr;
+}
+
+void Print(int[,] arr)
+{
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            Console.Write($"{arr[i, j]}  ");
+        }
+        Console.WriteLine();
+    }
+}
+
+
+
+
+// Console.WriteLine("Введит
+// (int, int) EnterText()
+// {
+//     Console.WriteLine("Введите количество строк");
+//     int m = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("Введите количество столбцов");
+//     int n = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine();
+//     return (m, n);
+// }
+
+// var numbers = EnterText();
+
+// int[,] array = new int[numbers.Item1, numbers.Item2];
+
+// Print(FillArray(array));
+
+// int[,] FillArray(int[,] arr)
+// {
+//     for (int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             // arrayTable[i,j] = random.Next(-99, 100);
+//             arr[i, j] = i + j;
+//         }
+//     }
+//     return arr;
+// }
+
+// void Print(int[,] arr)
+// {
+//     for (int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             Console.Write($"{arr[i, j]}  ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
