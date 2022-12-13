@@ -28,7 +28,7 @@ void FilPrintArray(int[,] array)
 FilPrintArray(arrayTab);
 
 Console.WriteLine();
-Console.WriteLine("Строчки массива массива отсортируются по убыванию:");
+Console.WriteLine("Элементы строк массива отсортируются по убыванию:");
 
 void SortPrint(int[,] array)
 {

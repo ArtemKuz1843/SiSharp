@@ -46,10 +46,24 @@ int[] ArrSumStr(int[,] array)
 
 void PrintArray(int[] arr)
 {
-    for(int i = 0; i < arr.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
         Console.WriteLine($"{arr[i]}");
     }
 }
 
 PrintArray(ArrSumStr(arrayTab));
+
+Console.WriteLine();
+
+void PrintMinStr(int[] arr)
+{
+    int max = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[max] > arr[i]) max = i;
+    }
+    Console.WriteLine($"Сумма элементов строки № {max + 1} наименьшая");
+}
+
+PrintMinStr(ArrSumStr(arrayTab));
